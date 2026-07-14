@@ -38,7 +38,7 @@ export default function DashboardPage() {
               key={r}
               onClick={() => setRango(r)}
               className={`rounded-full px-4 py-1.5 text-sm ${
-                rango === r ? "bg-brasa-500 text-carbon-900" : "bg-carbon-800 text-carbon-600"
+                rango === r ? "bg-brasa-500 text-white" : "bg-carbon-800 text-carbon-600"
               }`}
             >
               {r === "semana" ? "Última semana" : "Último mes"}
@@ -66,13 +66,13 @@ export default function DashboardPage() {
             <p className="mb-4 text-sm text-carbon-600">Ventas por día</p>
             <ResponsiveContainer width="100%" height={260}>
               <LineChart data={stats.serie}>
-                <CartesianGrid stroke="#3c332c" strokeDasharray="3 3" />
-                <XAxis dataKey="fecha" stroke="#8a7f74" fontSize={12} />
-                <YAxis stroke="#8a7f74" fontSize={12} />
+                <CartesianGrid stroke="#E4CBA1" strokeDasharray="3 3" />
+                <XAxis dataKey="fecha" stroke="#6E5233" fontSize={12} />
+                <YAxis stroke="#6E5233" fontSize={12} />
                 <Tooltip
-                  contentStyle={{ background: "#211c19", border: "1px solid #3c332c", color: "#fff" }}
+                  contentStyle={{ background: "#FFFBF2", border: "1px solid #E4CBA1", color: "#3B2A1A" }}
                 />
-                <Line type="monotone" dataKey="total" stroke="#d97b2e" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="total" stroke="#C1631F" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>

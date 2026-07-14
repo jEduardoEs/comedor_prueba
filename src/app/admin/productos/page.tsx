@@ -104,7 +104,7 @@ export default function ProductosPage() {
               </option>
             ))}
           </select>
-          <button className="w-full rounded-lg bg-brasa-500 py-2 font-semibold text-carbon-900 hover:bg-brasa-400">
+          <button className="w-full rounded-lg bg-brasa-500 py-2 font-semibold text-white hover:bg-brasa-400">
             Agregar producto
           </button>
         </form>
@@ -141,7 +141,7 @@ export default function ProductosPage() {
                 <td className="py-2 text-carbon-600">{p.categoria.nombre}</td>
                 <td className="py-2 text-white">Q{Number(p.precio).toFixed(2)}</td>
                 <td className="py-2">
-                  <span className={p.activo ? "text-green-400" : "text-carbon-600"}>
+                  <span className={p.activo ? "text-green-700" : "text-carbon-600"}>
                     {p.activo ? "Activo" : "Inactivo"}
                   </span>
                 </td>

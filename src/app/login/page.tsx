@@ -66,12 +66,12 @@ export default function LoginPage() {
             placeholder="••••••••"
           />
 
-          {error && <p className="mb-3 text-sm text-red-400">{error}</p>}
+          {error && <p className="mb-3 text-sm text-red-700">{error}</p>}
 
           <button
             type="submit"
             disabled={cargando}
-            className="w-full rounded-lg bg-brasa-500 py-2 font-semibold text-carbon-900 transition hover:bg-brasa-400 disabled:opacity-60"
+            className="w-full rounded-lg bg-brasa-500 py-2 font-semibold text-white transition hover:bg-brasa-400 disabled:opacity-60"
           >
             {cargando ? "Ingresando..." : "Ingresar"}
           </button>

@@ -131,7 +131,7 @@ export default function PosMesaPage() {
               onClick={() => setCategoriaActiva(c.id)}
               className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
                 categoriaActiva === c.id
-                  ? "bg-brasa-500 text-carbon-900"
+                  ? "bg-brasa-500 text-white"
                   : "bg-carbon-800 text-carbon-600 hover:text-brasa-200"
               }`}
             >
@@ -195,7 +195,7 @@ export default function PosMesaPage() {
           <button
             disabled={!orden || orden.items.length === 0}
             onClick={() => setModalCobro(true)}
-            className="w-full rounded-lg bg-brasa-500 py-3 font-semibold text-carbon-900 transition hover:bg-brasa-400 disabled:opacity-40"
+            className="w-full rounded-lg bg-brasa-500 py-3 font-semibold text-white transition hover:bg-brasa-400 disabled:opacity-40"
           >
             Cobrar
           </button>
@@ -239,7 +239,7 @@ export default function PosMesaPage() {
               <button
                 onClick={cobrar}
                 disabled={procesando}
-                className="flex-1 rounded-lg bg-brasa-500 py-2 font-semibold text-carbon-900 hover:bg-brasa-400 disabled:opacity-60"
+                className="flex-1 rounded-lg bg-brasa-500 py-2 font-semibold text-white hover:bg-brasa-400 disabled:opacity-60"
               >
                 {procesando ? "Procesando..." : "Confirmar cobro"}
               </button>

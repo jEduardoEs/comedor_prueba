@@ -92,7 +92,7 @@ export default function InventarioPage() {
           value={stockMinimo}
           onChange={(e) => setStockMinimo(e.target.value)}
         />
-        <button className="rounded-lg bg-brasa-500 py-2 text-sm font-semibold text-carbon-900 hover:bg-brasa-400 sm:col-span-5">
+        <button className="rounded-lg bg-brasa-500 py-2 text-sm font-semibold text-white hover:bg-brasa-400 sm:col-span-5">
           Agregar insumo
         </button>
       </form>
@@ -113,7 +113,7 @@ export default function InventarioPage() {
               return (
                 <tr key={it.id} className="border-t border-carbon-700">
                   <td className="py-2 text-white">{it.nombre}</td>
-                  <td className={`py-2 ${bajo ? "text-red-400" : "text-white"}`}>
+                  <td className={`py-2 ${bajo ? "text-red-700" : "text-white"}`}>
                     {Number(it.stockActual).toFixed(2)} {it.unidad}
                     {bajo && <span className="ml-2 text-xs">(bajo stock)</span>}
                   </td>
@@ -133,13 +133,13 @@ export default function InventarioPage() {
                       />
                       <button
                         onClick={() => registrarMovimiento(it.id, "ENTRADA")}
-                        className="rounded-lg bg-green-500/20 px-2 py-1 text-xs text-green-400 hover:bg-green-500/30"
+                        className="rounded-lg bg-green-600/15 px-2 py-1 text-xs text-green-700 hover:bg-green-600/25"
                       >
                         + Entrada
                       </button>
                       <button
                         onClick={() => registrarMovimiento(it.id, "SALIDA")}
-                        className="rounded-lg bg-red-500/20 px-2 py-1 text-xs text-red-400 hover:bg-red-500/30"
+                        className="rounded-lg bg-red-600/15 px-2 py-1 text-xs text-red-700 hover:bg-red-600/25"
                       >
                         − Salida
                       </button>
