@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { obtenerSesion } from "@/lib/auth";
+import { recalcularTotal } from "@/lib/ordenes";
 
 // Obtiene (o crea) la orden ABIERTA de una mesa
 export async function GET(req: NextRequest) {
@@ -65,10 +66,4 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json(orden);
-}
-
-export async function recalcularTotal(ordenId: string) {
-  const items = await prisma.ordenItem.findMany({ where: { ordenId } });
-  const total = items.reduce((acc, it) => acc + Number(it.precioUnitario) * it.cantidad, 0);
-  await prisma.orden.update({ where: { id: ordenId }, data: { total } });
 }

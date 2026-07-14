@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { obtenerSesion } from "@/lib/auth";
-import { recalcularTotal } from "../../route";
+import { recalcularTotal } from "@/lib/ordenes";
 
 export async function PATCH(req: NextRequest, { params }: { params: { itemId: string } }) {
   const sesion = await obtenerSesion();
